@@ -1,4 +1,5 @@
 import s from './friends.module.css';
+import propTypes from 'prop-types';
 
 const FriendListItem = ({ friends }) => {
   return friends.map(el => {
@@ -10,6 +11,9 @@ const FriendListItem = ({ friends }) => {
       </li>
     );
   });
+};
+FriendListItem.propTypes = {
+  friends: propTypes.array.isRequired,
 };
 
 export default FriendListItem;

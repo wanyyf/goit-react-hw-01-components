@@ -1,26 +1,32 @@
+import { Theader, Tdstyle, TableStyled } from './TransactionHistory.styled';
+import propTypes from 'prop-types';
+
 const TransactionHistory = ({ items }) => {
   return (
-    <table className="transaction-history">
+    <TableStyled className="transaction-history">
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <Theader>Type</Theader>
+          <Theader>Amount</Theader>
+          <Theader>Currency</Theader>
         </tr>
       </thead>
       <tbody>
         {items.map(el => {
           return (
             <tr key={el.id}>
-              <td>{el.type}</td>
-              <td>{el.amount}</td>
-              <td>{el.currency}</td>
+              <Tdstyle>{el.type}</Tdstyle>
+              <Tdstyle>{el.amount}</Tdstyle>
+              <Tdstyle>{el.currency}</Tdstyle>
             </tr>
           );
         })}
       </tbody>
-    </table>
+    </TableStyled>
   );
+};
+TransactionHistory.propTypes = {
+  items: propTypes.array.isRequired,
 };
 
 export default TransactionHistory;

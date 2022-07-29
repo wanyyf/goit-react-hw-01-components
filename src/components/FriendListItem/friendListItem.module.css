@@ -18,9 +18,3 @@
   border: salmon solid 2px;
   border-radius: 4px;
 }
-.friend {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
